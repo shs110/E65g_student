@@ -77,14 +77,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-5w-BWB" userLabel="blue">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="249.5"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="usl-ai-hee" userLabel="GridSize">
-                                                <rect key="frame" x="56" y="55" width="221" height="51"/>
-                                                <accessibility key="accessibilityConfiguration" label="GridSize"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="217" id="Zc2-WB-D6u"/>
-                                                    <constraint firstAttribute="height" constant="50" id="t8o-qt-1hw"/>
-                                                </constraints>
-                                            </slider>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOg-rI-D10" userLabel="Generation">
                                                 <rect key="frame" x="51" y="8" width="230" height="37"/>
                                                 <accessibility key="accessibilityConfiguration" label="Generation"/>
@@ -114,18 +106,36 @@
                                                     <constraint firstAttribute="width" constant="217" id="ppE-Ab-pwr"/>
                                                 </constraints>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GridSize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwE-dQ-Omd" userLabel="GridSizeLabel">
-                                                <rect key="frame" x="127.5" y="101" width="65" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frames/Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrS-Vs-KRb" userLabel="Frames/SecondLabel">
                                                 <rect key="frame" x="99.5" y="161" width="121" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GridSize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwE-dQ-Omd" userLabel="GridSizeLabel">
+                                                <rect key="frame" x="127.5" y="101" width="65" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuU-uL-ow1">
+                                                <rect key="frame" x="128" y="46" width="93" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="93" id="Aof-ol-0aw"/>
+                                                    <constraint firstAttribute="height" constant="21" id="SXV-gs-mBP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="usl-ai-hee" userLabel="GridSize">
+                                                <rect key="frame" x="56" y="55" width="221" height="51"/>
+                                                <accessibility key="accessibilityConfiguration" label="GridSize"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="217" id="Zc2-WB-D6u"/>
+                                                    <constraint firstAttribute="height" constant="50" id="t8o-qt-1hw"/>
+                                                </constraints>
+                                            </slider>
                                         </subviews>
                                         <color key="backgroundColor" red="0.048611111111111112" green="0.23768198173480171" blue="1" alpha="0.33556292808219179" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -134,11 +144,13 @@
                                             <constraint firstItem="epH-5a-FBw" firstAttribute="leading" secondItem="usl-ai-hee" secondAttribute="leading" id="BS8-3F-9i4"/>
                                             <constraint firstItem="usl-ai-hee" firstAttribute="top" secondItem="HOg-rI-D10" secondAttribute="bottom" constant="10" id="EhV-Kp-r0r"/>
                                             <constraint firstItem="gwE-dQ-Omd" firstAttribute="top" secondItem="HOg-rI-D10" secondAttribute="bottom" constant="56" id="HDH-kx-qd1"/>
+                                            <constraint firstItem="gwE-dQ-Omd" firstAttribute="leading" secondItem="KuU-uL-ow1" secondAttribute="leading" id="HT3-sM-nF4"/>
                                             <constraint firstItem="gwE-dQ-Omd" firstAttribute="centerX" secondItem="I0a-5w-BWB" secondAttribute="centerX" id="MWJ-E7-hW8"/>
                                             <constraint firstAttribute="bottom" secondItem="nts-5b-2TR" secondAttribute="bottom" constant="16.670000000000002" id="OjM-mO-ph6"/>
                                             <constraint firstItem="SrS-Vs-KRb" firstAttribute="centerX" secondItem="I0a-5w-BWB" secondAttribute="centerX" id="Pm1-YO-jbC"/>
                                             <constraint firstAttribute="trailing" secondItem="epH-5a-FBw" secondAttribute="trailing" constant="45" id="SYs-js-dxo"/>
                                             <constraint firstItem="usl-ai-hee" firstAttribute="leading" secondItem="I0a-5w-BWB" secondAttribute="leading" constant="58" id="Xxs-C0-xAK"/>
+                                            <constraint firstItem="KuU-uL-ow1" firstAttribute="top" secondItem="HOg-rI-D10" secondAttribute="bottom" constant="1" id="aZN-iM-Wor"/>
                                             <constraint firstItem="nts-5b-2TR" firstAttribute="top" secondItem="SrS-Vs-KRb" secondAttribute="bottom" constant="11" id="cTc-Rt-ZvW"/>
                                             <constraint firstAttribute="trailing" secondItem="usl-ai-hee" secondAttribute="trailing" constant="45" id="fQL-Fx-5id"/>
                                             <constraint firstAttribute="trailing" secondItem="nts-5b-2TR" secondAttribute="trailing" constant="45" id="fzU-Hu-Xq9"/>
